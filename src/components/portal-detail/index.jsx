@@ -185,7 +185,12 @@ export function PortalDetail() {
     if (bkApi) {
       bkApi.toggleBookmark(guid);
       if (bkApi.onUpdate) bkApi.onUpdate();
+    } else {
+      const bk = window.plugin.bookmarks;
+      if (bk && bk.switchStarPortal) bk.switchStarPortal(guid);
+      if (bk && bk.saveStorage) bk.saveStorage();
     }
+    if (window.runHooks) window.runHooks('pluginBkmrksEdit');
     updatePortal(null);
   }
 
