@@ -1,0 +1,220 @@
+@import '../../styles/tokens.css';
+
+.topbar {
+  grid-column: 1 / -1;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border);
+  min-height:40px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-bright);
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px var(--cyan), 0 0 25px var(--cyan), 0 0 50px var(--cyan-glow), 0 0 80px var(--cyan-glow);
+  animation: neonLogo 1.2s ease-in-out infinite, flicker 4s infinite;
+}
+
+@keyframes neonLogo {
+  0%, 100% { text-shadow: 0 0 10px var(--cyan), 0 0 25px var(--cyan), 0 0 50px var(--cyan-glow), 0 0 80px var(--cyan-glow); }
+  50% { text-shadow: 0 0 15px var(--cyan), 0 0 35px var(--cyan), 0 0 70px var(--cyan-glow), 0 0 100px var(--cyan-glow), 0 0 140px var(--cyan-glow); }
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.85; }
+}
+
+.logoSub {
+  color: var(--text-dim);
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-left: 8px;
+}
+
+.agentInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.agentNick {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.agentNick.enl {
+  color: var(--blue-enl);
+}
+
+.agentNick.res {
+  color: var(--blue-res);
+}
+
+.agentDetail {
+  color: var(--text-dim);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.clock {
+  color: var(--cyan);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.btn {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border);
+  color: var(--cyan);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  border-color: var(--cyan-dim);
+  background: var(--accent-10);
+}
+
+.btnActive {
+  border-color: var(--cyan);
+  box-shadow: 0 0 6px var(--cyan-glow), inset 0 0 4px var(--cyan-glow);
+  color: var(--text-bright);
+}
+
+/* Info/Passcode overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.modal {
+  background: var(--bg-primary, #080c10);
+  border: 1px solid var(--cyan-dim);
+  box-shadow: 0 0 40px var(--cyan-glow), inset 0 0 60px rgba(0, 0, 0, 0.5);
+  padding: 32px 40px;
+  text-align: center;
+  position: relative;
+  min-width: 280px;
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--text-primary);
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: var(--cyan);
+}
+
+.modalTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  text-shadow: 0 0 20px var(--cyan-glow);
+}
+
+.modalVersion {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.modalAuthor {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-bottom: 20px;
+}
+
+.nick {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.passcodeInput {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: var(--bg-panel, #0a0e14);
+  border: 1px solid var(--cyan-dim);
+  color: var(--text-primary);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.passcodeInput:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan-glow);
+}
+
+.passcodeSubmit {
+  margin-top: 10px;
+  padding: 6px 18px;
+  font-size: 12px;
+}
+
+.passcodeStatus {
+  margin-top: 8px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: var(--text-dim);
+  min-height: 16px;
+}

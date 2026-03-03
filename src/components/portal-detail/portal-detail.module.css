@@ -1,0 +1,286 @@
+@import '../../styles/tokens.css';
+
+.wrap {
+  background: var(--bg-secondary);
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 10px;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.noData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--text-dim);
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.titleRow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.portalName {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.portalName.enl { color: var(--blue-enl); }
+.portalName.res { color: var(--blue-res); }
+.portalName.neutral { color: var(--text-dim); }
+
+.star {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--text-dim);
+  padding: 0 4px 0 0;
+  line-height: 1;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.star:hover { color: gold; }
+.starActive { color: gold; }
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.imageCol {
+  width: 120px;
+  min-width: 120px;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.portalImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.infoResoCol {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.info {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+.ownerName {
+  font-weight: 600;
+}
+
+.ownerName.enl { color: var(--blue-enl); }
+.ownerName.res { color: var(--blue-res); }
+.ownerName.neutral { color: var(--text-dim); }
+
+/* XM Bar */
+.xmBarContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.xmBarLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.xmBar {
+  width: 100%;
+  height: 4px;
+  background: var(--accent-10);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.xmBarFill {
+  height: 100%;
+  background: var(--cyan);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Resonator Grid */
+.resos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.resoRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.resoActive .resoCube {
+  border-color: var(--cyan-dim);
+}
+
+.resoCube {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resoCubeEmpty {}
+
+.resoBg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--cyan);
+  opacity: 0.15;
+  transition: height 0.3s;
+}
+
+.resoLevel {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 9px;
+  position: relative;
+  color: var(--text-primary);
+}
+
+.resoInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.resoPct {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.7em;
+  color: var(--text-secondary);
+}
+
+.resoOwner {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.8em;
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 83px;
+}
+
+.resoOwner.enl { color: var(--blue-enl); }
+.resoOwner.res { color: var(--blue-res); }
+
+/* Mod Grid */
+.mods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.modSlot {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+  padding: 2px 3px;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 8px;
+  min-height: 28px;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: center;
+  cursor: default;
+  aspect-ratio: 1;
+}
+
+.modFilled {
+  border-color: var(--cyan-dim);
+}
+
+.modName {
+  color: var(--text-primary);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modRarity {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.modOwner {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.3em;
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modOwner.enl { color: var(--blue-enl); }
+.modOwner.res { color: var(--blue-res); }
+
+.common { color: var(--text-dim); }
+.rare { color: #a0a0ff; }
+.very_rare { color: #c080ff; }
+
+/* Faction colors */
+.enl { color: var(--blue-enl); }
+.res { color: var(--blue-res); }
+.neutral { color: var(--text-dim); }

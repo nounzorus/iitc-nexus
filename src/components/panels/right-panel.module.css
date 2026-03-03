@@ -1,0 +1,16 @@
+@import '../../styles/tokens.css';
+
+.panel {
+  background: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  grid-area: unset;
+  position: relative;
+}
+
+.panel::-webkit-scrollbar {
+  display: none;
+}

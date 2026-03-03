@@ -1,0 +1,31 @@
+{
+  "name": "iitc-nexus",
+  "version": "0.1.0",
+  "author": "nounzor <nounzorus@gmail.com>",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "storybook": "storybook dev -p 6006",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,css}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,css}\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@preact/preset-vite": "^2.10.3",
+    "@storybook/preact-vite": "^10.2.14",
+    "eslint": "^10.0.2",
+    "eslint-plugin-preact": "^0.1.0",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1",
+    "storybook": "^10.2.14",
+    "vite": "^6"
+  },
+  "dependencies": {
+    "@preact/signals": "^2.8.1",
+    "preact": "^10.28.4"
+  }
+}

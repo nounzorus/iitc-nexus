@@ -1,0 +1,5 @@
+node_modules/
+dist/
+actual/
+release/
+storybook-static/

@@ -1,0 +1,92 @@
+@import '../../styles/tokens.css';
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-panel);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.collapsed {
+  max-height: 35px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--cyan);
+  background: var(--accent-08);
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+.header:hover {
+  background: var(--accent-12);
+}
+
+.collapseBtn {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 9px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px 12px;
+}
+
+.noData {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.agentRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+}
+
+.rank {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: var(--text-dim);
+  min-width: 22px;
+}
+
+.nick {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.enl {
+  color: var(--blue-enl);
+}
+
+.res {
+  color: var(--blue-res);
+}

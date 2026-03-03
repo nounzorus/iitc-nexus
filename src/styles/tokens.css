@@ -1,0 +1,61 @@
+/* Resistance theme (default) */
+.iitc-dashboard {
+  --bg-primary: #080c10;
+  --bg-secondary: #0a1018;
+  --bg-panel: rgba(8, 20, 32, 0.85);
+  --bg-panel-hover: rgba(12, 28, 44, 0.9);
+  --border: rgba(0, 200, 220, 0.15);
+  --border-active: rgba(0, 200, 220, 0.4);
+  --cyan: #00c8dc;
+  --cyan-dim: #00788a;
+  --cyan-glow: rgba(0, 200, 220, 0.3);
+  --green: #00e87b;
+  --green-dim: #007a40;
+  --orange: #e8a000;
+  --red: #e83040;
+  --blue-enl: #28f428;
+  --blue-res: #00c8f8;
+  --text-primary: #c8dce8;
+  --text-dim: #4a6878;
+  --text-bright: #e0f0ff;
+  --accent-04: rgba(0, 200, 220, 0.04);
+  --accent-05: rgba(0, 200, 220, 0.05);
+  --accent-06: rgba(0, 200, 220, 0.06);
+  --accent-08: rgba(0, 200, 220, 0.08);
+  --accent-10: rgba(0, 200, 220, 0.1);
+  --accent-12: rgba(0, 200, 220, 0.12);
+  --accent-15: rgba(0, 200, 220, 0.15);
+  --accent-20: rgba(0, 200, 220, 0.2);
+  --scanline: rgba(0, 200, 220, 0.03);
+}
+
+/* Enlightened theme — green on black */
+.iitc-dashboard.theme-enl {
+  --bg-primary: #020402;
+  --bg-secondary: #040804;
+  --bg-panel: rgba(2, 8, 2, 0.92);
+  --bg-panel-hover: rgba(6, 16, 6, 0.95);
+  --border: rgba(40, 244, 40, 0.12);
+  --border-active: rgba(40, 244, 40, 0.35);
+  --cyan: #28f428;
+  --cyan-dim: #147a14;
+  --cyan-glow: rgba(40, 244, 40, 0.25);
+  --green: #28f428;
+  --green-dim: #147a14;
+  --orange: #e8a000;
+  --red: #e83040;
+  --blue-enl: #28f428;
+  --blue-res: #00c8f8;
+  --text-primary: #b0d8b0;
+  --text-dim: #2a5a2a;
+  --text-bright: #d0ffd0;
+  --accent-04: rgba(40, 244, 40, 0.04);
+  --accent-05: rgba(40, 244, 40, 0.05);
+  --accent-06: rgba(40, 244, 40, 0.06);
+  --accent-08: rgba(40, 244, 40, 0.08);
+  --accent-10: rgba(40, 244, 40, 0.1);
+  --accent-12: rgba(40, 244, 40, 0.12);
+  --accent-15: rgba(40, 244, 40, 0.15);
+  --accent-20: rgba(40, 244, 40, 0.2);
+  --scanline: rgba(40, 244, 40, 0.02);
+}

@@ -1,0 +1,11 @@
+@import '../../styles/tokens.css';
+
+.panel {
+  grid-column: 1 / -1;
+  background: var(--border);
+  border-top: 1px solid var(--border-active);
+  display: flex;
+  gap: 1px;
+  position: relative;
+  overflow: hidden;
+}
