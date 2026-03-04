@@ -81,6 +81,9 @@ src/
     tokens.css               # CSS custom properties (RES + ENL themes)
     dashboard.css            # Global layout & widget styles
 ```
+## Demo
+
+https://github.com/nounzorus/iitc-nexus/raw/refs/heads/main/demo/intro.mp4
 
 ## License
 
