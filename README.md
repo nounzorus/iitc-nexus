@@ -83,7 +83,8 @@ src/
 ```
 ## Demo
 
-https://github.com/nounzorus/iitc-nexus/raw/refs/heads/main/demo/intro.mp4
+https://github.com/user-attachments/assets/83114db7-7f9d-49fb-8fc2-8d5710e062e7
+
 
 ## License
 
